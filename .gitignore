@@ -12,6 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.vertx-poc.iml
 
 ### IntelliJ IDEA ###
 .idea
