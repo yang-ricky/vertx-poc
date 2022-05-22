@@ -26,6 +26,7 @@ public class DemoVerticle extends AbstractVerticle {
         router.route("/").handler(this::getDefault);
         router.route("/health").handler(this::getHealthCheck);
 
+        // 启动服务最核心的代码, 类似的可参考: https://silentbalanceyh.gitbooks.io/vert-x/content/chapter03/03-2-http-server.html
         vertx.createHttpServer().requestHandler(router).listen(8080, ar -> {
             if (ar.succeeded()) {
                 LOG.info("GreetingVerticle started: @" + this.hashCode());
